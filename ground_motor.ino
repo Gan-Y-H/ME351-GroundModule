@@ -5,13 +5,13 @@
 #define in3 11
 #define in4 10
 
-void leftForward(int v){
+void leftBackward(int v){
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   analogWrite(enA, v);
 }
 
-void leftBackward(int v){
+void leftForward(int v){
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
   analogWrite(enA, v);
@@ -75,8 +75,9 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   //left turn; left backward, right forward
-  leftTurn(100,100);
-  delay(10000);
-  forward(100);
-  delay(10000);
+  forward(80);
+  delay(5000);
+  backward(80);
+  delay(5000);
+
 }
